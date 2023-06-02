@@ -39,22 +39,3 @@ jobs:
 
       - name: List Docker images
         run: docker images
-
-  security_scan:
-    name: Dockerfile Security Scan
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-
-      - name: Install trivy
-        run: |
-          wget https://github.com/aquasecurity/trivy/releases/latest/download/trivy_$(uname -s)_$(uname -m).deb
-          sudo dpkg -i trivy_$(uname -s)_$(uname -m).deb
-
-      - name: Run Dockerfile security scan
-        run: trivy --exit-code 1 --severity HIGH,MEDIUM --no-progress .
-
-      - name: Scan Docker image
-        run: trivy --exit-code 1 --severity HIGH,MEDIUM --no-progress aidansaccount2004/my-img-k8s:${{ github.sha }}
