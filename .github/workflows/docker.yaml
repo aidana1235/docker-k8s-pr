@@ -7,15 +7,12 @@ on:
 
 jobs:
   build:
-    name: Build and Push Docker Image
+    name: Build, Tag, and Push Docker Image
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
-
-      - name: Set up Docker
-        uses: docker/setup-buildx-action@v1
 
       - name: Build Docker image
         run: docker build -t aidansaccount2004/my-img-k8s:latest .
@@ -24,9 +21,7 @@ jobs:
         run: docker tag aidansaccount2004/my-img-k8s:latest aidansaccount2004/my-img-k8s:${{ github.sha }}
 
       - name: Configure Docker credentials
-        run: |
-          echo "registry=https://index.docker.io/v1/" >> ~/.docker/config.json
-          echo "{\"auths\":{\"https://index.docker.io/v1/\":{\"auth\":\"${{ secrets.DOCKER_TOKEN }}\"}}}" | base64 -w 0 >> ~/.docker/config.json
+        run: echo ${{ secrets.DOCKER_TOKEN }} | docker login aidansaccount2004 -u aidansaccount2004 --password-stdin
 
       - name: Push Docker image to registry
         run: docker push aidansaccount2004/my-img-k8s:${{ github.sha }}
