@@ -23,10 +23,11 @@ jobs:
       - name: Tag Docker image with Git commit SHA
         run: docker tag aidansaccount2004/my-img-k8s:latest aidansaccount2004/my-img-k8s:${{ github.sha }}
 
+      - name: Configure Docker credentials
+        run: echo ${{ secrets.DOCKER_TOKEN }} | docker login aidansaccount2004 -u aidansaccount2004 --password-stdin
+
       - name: Push Docker image to registry
-        run: |
-          echo ${{ secrets.DOCKER_PASSWORD }} | docker login aidansaccount2004 -u aidansaccount2004 --password-stdin
-          docker push aidansaccount2004/my-img-k8s:${{ github.sha }}
+        run: docker push aidansaccount2004/my-img-k8s:${{ github.sha }}
 
   list:
     name: List Docker Images
