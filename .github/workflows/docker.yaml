@@ -22,6 +22,8 @@ jobs:
         run: |
           gcloud auth activate-service-account --key-file=/tmp/key.json
           gcloud auth configure-docker --quiet
+        env:
+          GOOGLE_APPLICATION_CREDENTIALS: /tmp/key.json
 
       - name: Build and push Docker image
         run: |
