@@ -6,7 +6,7 @@ on:
       - main
 
 env:
-  IMAGE_NAME: aidanasaccount2004/my-image-k8s
+  IMAGE_NAME: aidanasaccount2004/my-kube-img
   TAG: latest
 
 jobs:
