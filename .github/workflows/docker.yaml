@@ -23,7 +23,5 @@ jobs:
           push: true
           tags: aidanasaccount2004/img-k8s:latest
 
-      - name: Scan Dockerfile for vulnerabilities
-        uses: aquasecurity/trivy-action@v1
-        with:
-          image-ref: aidanasaccount2004/img-k8s:latest
+      - name: Scan Docker image for vulnerabilities
+        run: docker scan aidanasaccount2004/img-k8s:latest
