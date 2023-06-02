@@ -24,7 +24,9 @@ jobs:
         run: docker tag aidansaccount2004/my-img-k8s:latest aidansaccount2004/my-img-k8s:${{ github.sha }}
 
       - name: Configure Docker credentials
-        run: echo ${{ secrets.DOCKER_TOKEN }} | docker login aidansaccount2004 -u aidansaccount2004 --password-stdin
+        run: |
+          echo "registry=https://index.docker.io/v1/" >> ~/.docker/config.json
+          echo "{\"auths\":{\"https://index.docker.io/v1/\":{\"auth\":\"${{ secrets.DOCKER_TOKEN }}\"}}}" | base64 -w 0 >> ~/.docker/config.json
 
       - name: Push Docker image to registry
         run: docker push aidansaccount2004/my-img-k8s:${{ github.sha }}
@@ -39,3 +41,22 @@ jobs:
 
       - name: List Docker images
         run: docker images
+
+  security_scan:
+    name: Dockerfile Security Scan
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Install trivy
+        run: |
+          wget https://github.com/aquasecurity/trivy/releases/latest/download/trivy_$(uname -s)_$(uname -m).deb
+          sudo dpkg -i trivy_$(uname -s)_$(uname -m).deb
+
+      - name: Run Dockerfile security scan
+        run: trivy --exit-code 1 --severity HIGH,MEDIUM --no-progress .
+
+      - name: Scan Docker image
+        run: trivy --exit-code 1 --severity HIGH,MEDIUM --no-progress aidansaccount2004/my-img-k8s:${{ github.sha }}
