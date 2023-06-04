@@ -7,7 +7,7 @@ env:
   PROJECT_ID: charming-study-382702
   GAR_LOCATION: us-central1
   REPOSITORY: for-hello-docker
-  IMAGE: img-kubernetes
+  IMAGE: image-kubernetes
 
 jobs:
   login-build-push:
