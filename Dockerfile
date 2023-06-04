@@ -2,10 +2,10 @@
 FROM nginx:latest
 
 # Create the "aidana" user
-RUN useradd -ms /bin/bash aidana
+RUN useradd -ms /bin/bash aidan
 
 # Set the user to "aidana"
-USER aidana
+USER aidan
 
 # Copy the default app files to the appropriate location
 COPY index.html /usr/share/nginx/html/
