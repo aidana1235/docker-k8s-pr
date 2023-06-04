@@ -7,7 +7,7 @@ env:
   PROJECT_ID: charming-study-382702
   GAR_LOCATION: us-central1
   REPOSITORY: for-hello-chart
-  IMAGE: im-kubernet
+  IMAGE: img-kubernet
 
 jobs:
   login-build-push:
