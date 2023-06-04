@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "charming-study-382702",
+  "private_key_id": "82c29a5786aa921e8c83899c8e530073a913bd57",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCcAHsm2jaE/uea\nL6oaCIlG514vCJtEouBVJrwBpgtUNNJle1YBMutbA8I8nuE8abvpTAAoT+kbK2vL\nhSGIdpqRTNTMpjzIZUUFPSSYHBHnsL7j5FQ91OCWekTzESv2cp7FeCgYVRVC8FsN\npna4mOnLjZzlOzy0So+MDJ7TklmTRlc/WDPtiHONhIJBM+O3LO+34yG0HY+Bixpb\nOGVhambD3ZZQx0yZKVBacZolR5W0puuvOJTe0yoKCfy3mj3nIQBCDmhoDNlyk9Mq\nm4xfpLIdMdDfzRmCK+3Yplq7RMkq5sA2Nq6lNLevfbkHiCpaw37KumNE/wx2iNNw\nPeLNN+1RAgMBAAECggEABLshAPsiJyNh27OxWWvD2gIfQZbluo2j9wEfN3+VHV8i\nuFAmug+UwqRZCiSZWQ8t0zPqV06hF6FX+gqWC0DpjBmD5JbwBfXIQ5Hon7JOOrQJ\n/fhJM7zWeMnJeIOfTTCJrxxnPuGprOeEI2RWel+sy28GgI8s1pziQJGLaYgpLkWq\nLgnFplQNjNvyBU4bbXHe4gOwUBlGUbDszN5ZIaneKnuvygTTnn4R6x1UK7+Gu5J+\nbIS50IZQu0dw4yWtiP1HCwF0pi1serL5U+YHuO/i38ZlcROOjChsg0TtTEcx2YFe\n2GizOJkNpYOpxAv/UoEgyDV5sLmKri/2yX51bNYCdwKBgQDWYWjK39EW2mx97a4V\nMDTlOE6sektOe6JFLRXZow40QN4yao3UCTpHv9lZaMPzzZS6kXROYoS+B2a0o3Ud\nThilTTAzZ8uYi8nE6Uhf7v2wjdGokRONEmKHOfYI+6fdNr3f10jUOKQaG60fa209\nJx3M6H7rRYVNNkpQNaahzZqFKwKBgQC6Sa/SJULwINYVjcpdjvsXElgSEsg3wOco\nzSApuLFcAZFKkAn9D7+Ul1e/yuo6ZSRalwRxFngfKnsSrXqhYZswWZf9BJ/4LN2A\ndQ70q/P9zc+suP04PCO8UJOF0t7J/OPbLsAL2MpJ6OpCtChnTwZTfZo3w0syPo0W\nQ+XFX0LRcwKBgH+OAd4EAdKJL9hVnSi6QB7Ku/Tf5wLRiSGDy+ZsoDzzA8IXqD+r\nJeQfAGG0djMP9Rh1BzDEaZrvqGp+f2ZqWzuvi6hqb7daJTlmXEvIVWXBXCfh+jIL\n6FfxYrTBl4WF1r/ixlCPSwTFxuJU9vBV3+NVyn6OJNxmGx1Sbs0DGpd1AoGBAKog\n2Z2FwhgjJOESWRoQlmd/rUb0OD4SwgmVLCZuMivgkpwR581hMIm3nb/exQMHk6fX\n+4p8BsAPv85S+Ieh6GTDrfa43o98Cd5jCYGR+IZ2C4+mcjuFUO2OeOvipOy7NCzc\nCS/IkRXmzOqWNcADf7eIIeuDQ41jat5Gq/URBqjZAoGBAIx5OzNEhQgi6IhSiMV9\nNl8N7h9miomyEDZiV3CeVHSG6Ytc7JsId8BsE2YGFAMnQRXSI+lFCpYTsiRZjC4x\n0YXl6TaRqaVbcqmZ8ENrfffnqflwBtNi6D5M4gAJ66M9I4AyfXsxNPMeXsgh6PI0\nZs29ewvtMDftYL/N8XSNfo1A\n-----END PRIVATE KEY-----\n",
+  "client_email": "my-service-account@charming-study-382702.iam.gserviceaccount.com",
+  "client_id": "103833409449044641916",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/my-service-account%40charming-study-382702.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
