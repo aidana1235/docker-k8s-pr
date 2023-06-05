@@ -2,11 +2,8 @@
 FROM nginx:latest
 
 # Create the "aidana" user
-RUN useradd -ms /bin/bash aidan
-
-# Set the user to "aidana"
+RUN addgroup devops && adduser aidan -G devops --disabled-password
 USER aidan
-
 # Copy the default app files to the appropriate location
 COPY index.html /usr/share/nginx/html/
 COPY style.css /usr/share/nginx/html/
