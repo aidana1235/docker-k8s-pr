@@ -5,7 +5,7 @@ FROM nginx:latest
 RUN addgroup devops
 
 # Create the "aidan" user and add to the "devops" group
-RUN adduser aidan -G devops --disabled-password
+RUN adduser --ingroup devops --disabled-password aidan
 
 # Switch to the "aidan" user
 USER aidan
